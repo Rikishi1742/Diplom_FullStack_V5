@@ -1,0 +1,44 @@
+datasource db {
+    provider = "mongodb"
+    url      = env("MONGO_DATA_URI")
+}
+
+generator client {
+    provider = "prisma-client-js"
+    output   = "./generated/client"
+}
+
+generator typegraphql {
+    provider = "typegraphql-prisma"
+    output   = "./generated/type-graphql"
+}
+
+type UserPasswordType {
+    initialPassword Boolean
+    password        String
+}
+
+model User {
+    id       String            @id @default(auto()) @map("_id") @db.ObjectId
+    username String            @unique
+    roles    String[]          @default([])
+    email    String
+    name     String?
+    password UserPasswordType?
+}
+
+model UserRefreshToken {
+    user_id String @id @default(auto()) @map("_id") @db.ObjectId
+    token   String @unique
+}
+
+model Partner {
+    id   String  @id @default(auto()) @map("_id") @db.ObjectId
+    name String
+    logo String?
+}
+
+model Project {
+    id   String @id @default(auto()) @map("_id") @db.ObjectId
+    name String
+}

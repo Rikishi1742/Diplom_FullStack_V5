@@ -1,0 +1,58 @@
+.MainContent
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.MainContent .Image 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Image img {
+    width: 80%;
+    height: auto;
+}
+
+.MainContent div
+{
+    width: 50%;
+}
+
+@media screen and (max-width: 1300px) {
+    
+    .MainTitleContentContainer
+    {
+        width: 90vw;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    
+    .MainTitleContentContainer
+    {
+        width: 90vw;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .MainContent {
+        flex-direction: column;
+        height: 80%;
+    }
+
+    .Image 
+    {
+        position: absolute;
+        top: 45vh;
+        z-index: 0;
+    }
+
+    .MainContent .Text {
+        z-index: 1;
+        width: 80% !important;
+    }
+}

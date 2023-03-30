@@ -1,0 +1,93 @@
+.Logo {
+    width: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.Logo a {
+    width: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.Logo img {
+    width: auto;
+    height: 90%;
+}
+
+@-webkit-keyframes swing {
+    15% {
+      -webkit-transform: translateY(2px);
+      transform: translateY(2px);
+    }
+    30% {
+      -webkit-transform: translateY(1px);
+      transform: translateY(1px);
+    }
+    40% {
+      -webkit-transform: translateY(0px);
+      transform: translateY(0px);
+    }
+    50% {
+      -webkit-transform: translateY(-1px);
+      transform: translateY(-1px);
+    }
+    65% {
+      -webkit-transform: translateY(-2px);
+      transform: translateY(-3px);
+    }
+    100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes swing {
+    15% {
+        -webkit-transform: translateY(2px);
+        transform: translateY(2px);
+      }
+      30% {
+        -webkit-transform: translateY(1px);
+        transform: translateY(1px);
+      }
+      40% {
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+      }
+      50% {
+        -webkit-transform: translateY(-1px);
+        transform: translateY(-1px);
+      }
+      65% {
+        -webkit-transform: translateY(-2px);
+        transform: translateY(-3px);
+      }
+      100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+      }
+  }
+  
+  .Logo:hover {
+    -webkit-animation: swing 0.8s ease;
+    animation: swing 0.8s ease;
+     -webkit-animation-iteration-count: 1;
+     animation-iteration-count: 1;
+  }
+
+@media screen and (max-width: 1300px) {
+    .Logo {
+        height: 7.0vw;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .Logo {
+        height: 9.0vw;
+    }
+}

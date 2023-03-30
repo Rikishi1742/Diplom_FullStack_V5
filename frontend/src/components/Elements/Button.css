@@ -1,0 +1,61 @@
+button p{
+    font-family: 'Iceland' !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    font-size: 32px !important;
+    line-height: 0% !important;
+    /* identical to box height, or 0px */
+
+
+    text-align: center !important;
+
+    color: #66CC66 !important;
+
+    padding-top: 35px !important;
+    padding-bottom: 35px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    margin: 0;
+}
+
+button {
+    background: #FFFFFF;
+    border-radius: 35px;
+    border:none;
+    outline: 0;
+    cursor: pointer;
+
+    max-width: 350px;
+    min-width: 150px;
+    max-height: 80px;
+    min-height: 30px;
+}
+
+.button {
+    background: #FFFFFF;
+    border-radius: 35px;
+    border:none;
+    outline: 0;
+    cursor: pointer;
+
+    max-width: 350px;
+    min-width: 150px;
+    max-height: 80px;
+    min-height: 30px;
+}
+
+button:hover {
+    background-color: #66CC66;
+}
+
+button:hover p{
+    color: #ffffff !important;
+}
+
+.button:hover {
+    background-color: #66CC66;
+}
+
+.button:hover p{
+    color: #ffffff !important;
+}

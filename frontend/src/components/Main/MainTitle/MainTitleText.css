@@ -1,0 +1,16 @@
+.MainContent .Text {
+    width: 50%;
+}
+
+
+.MainContent h2 {
+    color: #FFFFFF;
+}
+
+.MainContent h2 b {
+    color: #66CC66;
+}
+
+p {
+    color: #FFFFFF;
+}

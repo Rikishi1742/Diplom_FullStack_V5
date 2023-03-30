@@ -1,0 +1,42 @@
+.AboutUsContent {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    height: 80%;
+    margin:auto;
+}
+
+.AboutUsContent h2 {
+    justify-content: right;
+    text-align: right;
+    color: #2E2E2E;
+}
+
+.AboutUsContent p {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    text-align: right;
+    letter-spacing: -0.06em;
+    justify-content: left;
+    text-align: left;
+
+    color: #2E2E2E;
+}
+
+.AboutUsContent b {
+    color: #66CC66;
+}
+
+.Recall
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+

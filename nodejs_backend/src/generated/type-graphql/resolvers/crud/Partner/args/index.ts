@@ -1,0 +1,14 @@
+export { AggregatePartnerArgs } from "./AggregatePartnerArgs";
+export { CreateManyPartnerArgs } from "./CreateManyPartnerArgs";
+export { CreateOnePartnerArgs } from "./CreateOnePartnerArgs";
+export { DeleteManyPartnerArgs } from "./DeleteManyPartnerArgs";
+export { DeleteOnePartnerArgs } from "./DeleteOnePartnerArgs";
+export { FindFirstPartnerArgs } from "./FindFirstPartnerArgs";
+export { FindFirstPartnerOrThrowArgs } from "./FindFirstPartnerOrThrowArgs";
+export { FindManyPartnerArgs } from "./FindManyPartnerArgs";
+export { FindUniquePartnerArgs } from "./FindUniquePartnerArgs";
+export { FindUniquePartnerOrThrowArgs } from "./FindUniquePartnerOrThrowArgs";
+export { GroupByPartnerArgs } from "./GroupByPartnerArgs";
+export { UpdateManyPartnerArgs } from "./UpdateManyPartnerArgs";
+export { UpdateOnePartnerArgs } from "./UpdateOnePartnerArgs";
+export { UpsertOnePartnerArgs } from "./UpsertOnePartnerArgs";
