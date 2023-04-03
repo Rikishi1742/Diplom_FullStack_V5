@@ -93,7 +93,6 @@ function LoginPage({ }: Props) {
 
   }, [username, email, name, password, repeatPassword]);
 
-
   return (
     <div className='loginPage'>
 
@@ -124,7 +123,7 @@ function LoginPage({ }: Props) {
 
                 )
               }
-              
+
               {
                 registerMode === false && (
                   <>
