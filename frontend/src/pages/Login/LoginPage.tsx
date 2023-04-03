@@ -10,7 +10,6 @@ import { useNavigate } from 'react-router-dom';
 
 type Props = {}
 
-
 function LoginPage({ }: Props) {
 
   const navigate = useNavigate();
@@ -125,7 +124,7 @@ function LoginPage({ }: Props) {
 
                 )
               }
-
+              
               {
                 registerMode === false && (
                   <>
@@ -134,7 +133,7 @@ function LoginPage({ }: Props) {
                   </>
                 )
               }
-
+ 
               {
                 registerMode && (<CButton type="submit" onClick={signUp} className='w-100 my-2'>Зарегистрироваться</CButton>
 
