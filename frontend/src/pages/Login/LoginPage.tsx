@@ -100,20 +100,20 @@ function LoginPage({ }: Props) {
           event.preventDefault();
           signIn();
         }}>
-              <CFormInput type="string" className='my-2' id="usernameInput" feedbackInvalid={errorMessage} invalid={errorMessage ? true : false} value={username} onChange={(e) => { setUsername(e.target.value) }} label="Логин" />
+              <CFormInput type="string" className='my-2' id="usernameInput" feedbackInvalid={errorMessage} invalid={errorMessage ? true : false} value={username} onChange={(e) => { setUsername(e.target.value) }} label="Login" />
 
               {registerMode && (<CFormInput type="email" className='my-2' id="emailInput" value={email} onChange={(e) => { setEmail(e.target.value) }} label="Email" />
               )}
 
               {
-                registerMode && (<CFormInput type="string" className='my-2' id="nameInput" value={name} onChange={(e) => { setName(e.target.value) }} label="Имя" />
+                registerMode && (<CFormInput type="string" className='my-2' id="nameInput" value={name} onChange={(e) => { setName(e.target.value) }} label="Name" />
                 )
               }
 
-              <CFormInput type="password" className='my-2' id="passwordInput" value={password} onChange={(e) => { setPassowrd(e.target.value) }} label="Пароль" />
+              <CFormInput type="password" className='my-2' id="passwordInput" value={password} onChange={(e) => { setPassowrd(e.target.value) }} label="Password" />
 
               {
-                registerMode && (<CFormInput type="password" className='my-2' id="passwordRepeatInput" value={repeatPassword} onChange={(e) => { setRepeatPassword(e.target.value) }} label="Повторите пароль" />
+                registerMode && (<CFormInput type="password" className='my-2' id="passwordRepeatInput" value={repeatPassword} onChange={(e) => { setRepeatPassword(e.target.value) }} label="Password repeat" />
 
                 )
               }
@@ -121,14 +121,14 @@ function LoginPage({ }: Props) {
               {
                 registerMode === false && (
                   <div className='btnWrapper'>
-                    <CButton type="submit" onClick={signIn} className='w-100 my-2'>Войти</CButton>
-                    <CButton onClick={() => { setRegisterMode(true) }} color="primary" variant="outline" className='w-100 my-2'>Регистрация</CButton>
+                    <CButton type="submit" onClick={signIn} className='w-100 my-2'>Log in</CButton>
+                    <CButton onClick={() => { setRegisterMode(true) }} color="primary" variant="outline" className='w-100 my-2'>Registration</CButton>
                   </div>
                 )
               }
- 
+
               {
-                registerMode && (<CButton type="submit" onClick={signUp} className='w-100 my-2'>Зарегистрироваться</CButton>
+                registerMode && (<CButton type="submit" onClick={signUp} className='w-100 my-2'>Register</CButton>
 
                 )
               }
