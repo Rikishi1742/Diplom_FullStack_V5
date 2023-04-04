@@ -96,4 +96,34 @@ form input[type="email"] {
     form {
         width: 25vw;
     }
-};
+}
+
+@media screen and (max-width: 1300px) {
+    form {
+        width: 40vw;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    form {
+        width: 50vw;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    form {
+        width: 60vw;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    form {
+        width: 70vw;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    form {
+        width: 80vw;
+    }
+}
