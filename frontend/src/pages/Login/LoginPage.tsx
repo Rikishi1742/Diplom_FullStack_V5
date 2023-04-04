@@ -5,6 +5,7 @@ import { USER_SIGN_IN, USER_SIGN_UP } from '../../GraphQL/mutation';
 import { UserContext, LoginStatus } from "../../context/UserContext";
 
 import "./LoginPage.css";
+import "../../css/index.css";
 import { decodeToken, saveTokens } from '../../manage-tokens';
 import { useNavigate } from 'react-router-dom';
 
@@ -34,7 +35,6 @@ function LoginPage({ }: Props) {
 
   const [userSignIn] = useMutation(USER_SIGN_IN);
   const [userSignUp] = useMutation(USER_SIGN_UP);
-
 
   const signIn = useCallback(() => {
 
@@ -67,7 +67,6 @@ function LoginPage({ }: Props) {
       return;
     }
 
-
     userSignUp({
       variables: {
         userRegisterData: {
@@ -96,16 +95,11 @@ function LoginPage({ }: Props) {
   return (
     <div className='loginPage'>
 
-      <div className='w-100'>
-        <div className='d-flex justify-content-center align-items-center'>
-          <CImage src="inthemelabLogo.png" width={100} height={100} />
-        </div>
+      <div className='container'>
         <CForm className="row d-flex h-100 w-100 justify-content-center align-items-center" onSubmit={(event) => {
           event.preventDefault();
           signIn();
         }}>
-          <CRow className="justify-content-center w-50">
-            <CCol md={6}>
               <CFormInput type="string" className='my-2' id="usernameInput" feedbackInvalid={errorMessage} invalid={errorMessage ? true : false} value={username} onChange={(e) => { setUsername(e.target.value) }} label="Логин" />
 
               {registerMode && (<CFormInput type="email" className='my-2' id="emailInput" value={email} onChange={(e) => { setEmail(e.target.value) }} label="Email" />
@@ -126,10 +120,10 @@ function LoginPage({ }: Props) {
 
               {
                 registerMode === false && (
-                  <>
+                  <div className='btnWrapper'>
                     <CButton type="submit" onClick={signIn} className='w-100 my-2'>Войти</CButton>
                     <CButton onClick={() => { setRegisterMode(true) }} color="primary" variant="outline" className='w-100 my-2'>Регистрация</CButton>
-                  </>
+                  </div>
                 )
               }
  
@@ -138,9 +132,6 @@ function LoginPage({ }: Props) {
 
                 )
               }
-              
-            </CCol>
-          </CRow>
         </CForm>
       </div>
     </div>
