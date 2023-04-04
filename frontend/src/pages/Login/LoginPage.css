@@ -44,6 +44,14 @@ form .btnWrapper {
     margin: 10px;
     margin-left: 0;
     margin-right: 0;
+
+    background: #FFFFFF;
+    border-radius: 35px;
+    border:none;
+    outline: 0;
+    cursor: pointer;
+
+    
 }
 
 form label {

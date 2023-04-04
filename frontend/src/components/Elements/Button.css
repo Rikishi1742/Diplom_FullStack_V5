@@ -51,11 +51,3 @@ button:hover {
 button:hover p{
     color: #ffffff !important;
 }
-
-.button:hover {
-    background-color: #66CC66;
-}
-
-.button:hover p{
-    color: #ffffff !important;
-}
