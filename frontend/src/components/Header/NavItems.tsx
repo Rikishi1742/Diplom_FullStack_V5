@@ -5,8 +5,10 @@ import { CTooltip } from "@coreui/react";
 
 import React, { useContext, useState } from 'react'
 import { useNavigate } from "react-router-dom";
-import { UserContext } from "../../context/UserContext";
+import { UserContext, LoginStatus } from "../../context/UserContext";
+
 import { deleteTokens } from "../../manage-tokens";
+
 
 type Props = {
     children?: React.ReactNode
@@ -15,9 +17,7 @@ type Props = {
 const NavItems = ({ children }: Props) => {
 
     const navigate = useNavigate();
-
     const { userPayload, setUserDataByDispatch } = useContext(UserContext);
-
 
     return (
         <div className="NavItemsContainer">
@@ -35,21 +35,24 @@ const NavItems = ({ children }: Props) => {
                         <p>Education</p>
                     </NavLink>
 
-                    <NavLink href="/login" active>
-                        <p>Authorization</p>
-                    </NavLink>
+                    {!LoginStatus && <NavLink href="/login" active>
+                        <p onClick={() => {navigate("/login");}}>Authorization</p>
+                    </NavLink>}
 
-                    <p>Settings</p>
-
-                    <button onClick={()=> {
-                        setUserDataByDispatch("LOGOUT", null)
+                    { LoginStatus && <>
+                        <NavLink href="/Account" active><p>Account</p></NavLink> 
+                        
+                        <NavLink href="/login" active>
+                        <p onClick={() => {setUserDataByDispatch("LOGOUT", null)
                         deleteTokens()
-                        navigate("/login");
+                        navigate("/login");}}>Exit</p>
+                    </NavLink>
+                    </>
                     }
 
-                        
+                    
 
-                    }>Exit</button>
+                    <p>Settings</p>
 
                 </div>
 

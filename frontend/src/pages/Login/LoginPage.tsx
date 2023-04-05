@@ -110,8 +110,7 @@ function LoginPage({ }: Props) {
 
               {
                 registerMode && (<CFormInput type="string" className='my-2' id="nameInput" value={name} onChange={(e) => { setName(e.target.value) }} label="Name" />
-                )
-              }
+                )}
 
               <CFormInput type="password" className='my-2' id="passwordInput" value={password} onChange={(e) => { setPassowrd(e.target.value) }} label="Password" />
 
