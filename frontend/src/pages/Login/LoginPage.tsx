@@ -103,37 +103,44 @@ function LoginPage({ }: Props) {
         }}>
               {registerMode && <h2>Registration</h2>}
               {registerMode === false && <h2>Authorization</h2>}
-              <CFormInput type="string" className='my-2' id="usernameInput" feedbackInvalid={errorMessage} invalid={errorMessage ? true : false} value={username} onChange={(e) => { setUsername(e.target.value) }} label="Login" />
 
-              {registerMode && (<CFormInput type="email" className='my-2' id="emailInput" value={email} onChange={(e) => { setEmail(e.target.value) }} label="Email" />
-              )}
+              <div className='FormCol'>
+                
+                <div className='Col'>
+                <CFormInput type="string" className='my-2' id="usernameInput" feedbackInvalid={errorMessage} invalid={errorMessage ? true : false} value={username} onChange={(e) => { setUsername(e.target.value) }} label="Login" />    
+                {registerMode && (<CFormInput type="email" className='my-2' id="emailInput" value={email} onChange={(e) => { setEmail(e.target.value) }} label="Email" />)}
+                {registerMode && (<CFormInput type="string" className='my-2' id="nameInput" value={name} onChange={(e) => { setName(e.target.value) }} label="Name" />)}
+                </div>
 
-              {
-                registerMode && (<CFormInput type="string" className='my-2' id="nameInput" value={name} onChange={(e) => { setName(e.target.value) }} label="Name" />
-                )}
+                <div className='Col'>
+                <CFormInput type="password" className='my-2' id="passwordInput" value={password} onChange={(e) => { setPassowrd(e.target.value) }} label="Password" />
+                {registerMode && (<CFormInput type="password" className='my-2' id="passwordRepeatInput" value={repeatPassword} onChange={(e) => { setRepeatPassword(e.target.value) }} label="Password repeat" />)}
+                {
+                  registerMode === false && (
+                    <div className='btnWrapper'>
+                      <Button type="submit" onClick={signIn} Value="Log in" className='w-100 my-2'>Log in</Button>
+                      <Button onClick={() => { setRegisterMode(true) }} type="js" Value="Registration" className='w-100 my-2'>Registration</Button>
+                    </div>)}
 
-              <CFormInput type="password" className='my-2' id="passwordInput" value={password} onChange={(e) => { setPassowrd(e.target.value) }} label="Password" />
+                {
+                  registerMode && (<Button type="submit" onClick={signUp} Value="Register" className='w-100 my-2'>Register</Button>
 
-              {
-                registerMode && (<CFormInput type="password" className='my-2' id="passwordRepeatInput" value={repeatPassword} onChange={(e) => { setRepeatPassword(e.target.value) }} label="Password repeat" />
+                  )
+                }
+                </div>
 
-                )
-              }
+              </div>
 
-              {
-                registerMode === false && (
-                  <div className='btnWrapper'>
-                    <Button type="submit" onClick={signIn} Value="Log in" className='w-100 my-2'>Log in</Button>
-                    <Button onClick={() => { setRegisterMode(true) }} type="js" Value="Registration" className='w-100 my-2'>Registration</Button>
-                  </div>
-                )
-              }
+              
+              
 
-              {
-                registerMode && (<Button type="submit" onClick={signUp} Value="Register" className='w-100 my-2'>Register</Button>
+              
 
-                )
-              }
+              
+
+              
+
+              
         </CForm>
       </div>
     </div>
