@@ -3,6 +3,7 @@ import { CForm, CFormInput, CCol, CButton, CRow, CImage } from '@coreui/react';
 import React, { useCallback, FormEventHandler, useState, useContext, useEffect } from 'react'
 import { USER_SIGN_IN, USER_SIGN_UP } from '../../GraphQL/mutation';
 import { UserContext, LoginStatus } from "../../context/UserContext";
+import Button from '../../components/Elements/Button';
 
 import "./LoginPage.css";
 import "../../css/index.css";
@@ -100,6 +101,8 @@ function LoginPage({ }: Props) {
           event.preventDefault();
           signIn();
         }}>
+              {registerMode && <h2>Registration</h2>}
+              {registerMode === false && <h2>Authorization</h2>}
               <CFormInput type="string" className='my-2' id="usernameInput" feedbackInvalid={errorMessage} invalid={errorMessage ? true : false} value={username} onChange={(e) => { setUsername(e.target.value) }} label="Login" />
 
               {registerMode && (<CFormInput type="email" className='my-2' id="emailInput" value={email} onChange={(e) => { setEmail(e.target.value) }} label="Email" />
@@ -121,14 +124,14 @@ function LoginPage({ }: Props) {
               {
                 registerMode === false && (
                   <div className='btnWrapper'>
-                    <CButton type="submit" onClick={signIn} className='w-100 my-2'>Log in</CButton>
-                    <CButton onClick={() => { setRegisterMode(true) }} color="primary" variant="outline" className='w-100 my-2'>Registration</CButton>
+                    <Button type="submit" onClick={signIn} Value="Log in" className='w-100 my-2'>Log in</Button>
+                    <Button onClick={() => { setRegisterMode(true) }} type="js" Value="Registration" className='w-100 my-2'>Registration</Button>
                   </div>
                 )
               }
 
               {
-                registerMode && (<CButton type="submit" onClick={signUp} className='w-100 my-2'>Register</CButton>
+                registerMode && (<Button type="submit" onClick={signUp} Value="Register" className='w-100 my-2'>Register</Button>
 
                 )
               }
