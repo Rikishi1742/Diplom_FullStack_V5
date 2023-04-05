@@ -39,6 +39,9 @@ const NavItems = ({ children }: Props) => {
                         <p onClick={() => {navigate("/login");}}>Authorization</p>
                     </NavLink>}
 
+                    <NavLink href="/settings" active>
+                        <p>Settings</p>
+                    </NavLink>      
                     {loginStatus == LoginStatus.LoggedIn && <>
                         <NavLink href="/Account" active><p>Account</p></NavLink> 
                         <NavLink href="/login" active>
@@ -48,10 +51,6 @@ const NavItems = ({ children }: Props) => {
                     </NavLink>
                     </>
                     }
-
-                    
-
-                    <p>Settings</p>
 
                 </div>
 
