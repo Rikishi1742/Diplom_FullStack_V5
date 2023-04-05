@@ -10,6 +10,7 @@ type Props = {}
 function HomePage({}: Props) {
   return (
     <>
+      
       <MainTitle />
       <MainAboutUs />
       <MainInfo />

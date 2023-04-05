@@ -69,12 +69,7 @@ function RedirectToLogin({ children }: Props) {
                     <CSpinner color="primary" />
                 </CContainer>
             )}
-            {loginStatus === LoginStatus.LoggedOut && (
-                <Routes>
-                    <Route path="/login" element={<LoginPage />} />
-                </Routes>
-            )}
-
+            {loginStatus === LoginStatus.LoggedOut && children}
 
         </>
     )

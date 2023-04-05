@@ -17,7 +17,7 @@ type Props = {
 const NavItems = ({ children }: Props) => {
 
     const navigate = useNavigate();
-    const { userPayload, setUserDataByDispatch } = useContext(UserContext);
+    const { userPayload, loginStatus, setUserDataByDispatch,  } = useContext(UserContext);
 
     return (
         <div className="NavItemsContainer">
@@ -35,13 +35,12 @@ const NavItems = ({ children }: Props) => {
                         <p>Education</p>
                     </NavLink>
 
-                    {!LoginStatus && <NavLink href="/login" active>
+                    {loginStatus == LoginStatus.LoggedOut &&  <NavLink href="/login" active>
                         <p onClick={() => {navigate("/login");}}>Authorization</p>
                     </NavLink>}
 
-                    { LoginStatus && <>
+                    {loginStatus == LoginStatus.LoggedIn && <>
                         <NavLink href="/Account" active><p>Account</p></NavLink> 
-                        
                         <NavLink href="/login" active>
                         <p onClick={() => {setUserDataByDispatch("LOGOUT", null)
                         deleteTokens()
