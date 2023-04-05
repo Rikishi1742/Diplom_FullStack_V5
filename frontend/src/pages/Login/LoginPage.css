@@ -31,14 +31,15 @@ form .Col {
     justify-content: center;
     flex-direction: column;
     flex-wrap: wrap;
-    align-items: start;
-    width: 80%;
+    align-items: center;
+    width: 100%;
 }
 
 .FormCol {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 form h2 {
@@ -49,15 +50,14 @@ form h2 {
 }
 
 form label {
-    width: 100%;
+    width: 90%;
     text-align: left;
-    margin-left: 15px;
 
     font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 1.2vw;
-    line-height: 26px;
+    line-height: 18px;
 }
 
 form .btnWrapper {
@@ -79,13 +79,14 @@ form label {
 }
 
 form input[type="string"] {
-    width: 100%;
+    width: 90%;
+    padding-left: 10%;
     outline: 0;
     border: 0;
     height: 45px;
     margin-top: 15px;
     margin-bottom: 15px;
-    text-align: center;
+    text-align: left;
     border-radius: 111px;
 
     font-weight: 600;
@@ -93,13 +94,14 @@ form input[type="string"] {
 }
 
 form input[type="password"] {
-    width: 100%;
+    width: 90%;
+    padding-left: 10%;
     outline: 0;
     border: 0;
     height: 45px;
     margin-top: 15px;
     margin-bottom: 15px;
-    text-align: center;
+    text-align: left;
     border-radius: 111px;
 
     font-weight: 600;
