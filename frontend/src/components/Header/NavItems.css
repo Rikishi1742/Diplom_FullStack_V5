@@ -53,11 +53,14 @@ a {
 
 .Burger {
     display: none;
-    background-color: black;
-    height: 6vh;
-    width: 60px;
+    height: 5vh;
+    width: 7vh;
 }
 
+.Burger img {
+    width: auto;
+    height: 100%;
+}
 
 
 .Items p:hover {

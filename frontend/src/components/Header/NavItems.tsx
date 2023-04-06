@@ -1,13 +1,13 @@
 import Logo from "./Logo";
 import './NavItems.css'
 import NavLink from '../../components/ui/NavLink';
-import { CTooltip } from "@coreui/react";
 
 import React, { useContext, useState } from 'react'
 import { useNavigate } from "react-router-dom";
 import { UserContext, LoginStatus } from "../../context/UserContext";
 
 import { deleteTokens } from "../../manage-tokens";
+import BurgerMenu from "./BurgerMenu";
 
 
 type Props = {
@@ -24,9 +24,7 @@ const NavItems = ({ children }: Props) => {
             <Logo />
 
             <div className="BurgerMenu">
-
-                <div className="Items">
-
+                <BurgerMenu>
                     <NavLink href="/aboutUS" active>
                         <p>About Us</p>
                     </NavLink>
@@ -41,7 +39,8 @@ const NavItems = ({ children }: Props) => {
 
                     <NavLink href="/settings" active>
                         <p>Settings</p>
-                    </NavLink>      
+                    </NavLink>  
+
                     {loginStatus == LoginStatus.LoggedIn && <>
                         <NavLink href="/Account" active><p>Account</p></NavLink> 
                         <NavLink href="/login" active>
@@ -51,10 +50,8 @@ const NavItems = ({ children }: Props) => {
                     </NavLink>
                     </>
                     }
-
-                </div>
-
-                <div className="Burger"></div>
+                </BurgerMenu>
+                    
             </div>
 
         </div>
