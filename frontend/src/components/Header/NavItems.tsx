@@ -8,6 +8,7 @@ import { UserContext, LoginStatus } from "../../context/UserContext";
 
 import { deleteTokens } from "../../manage-tokens";
 import BurgerMenu from "./BurgerMenu";
+import Burger from "./Burger";
 
 
 type Props = {
@@ -54,9 +55,7 @@ const NavItems = ({ children }: Props) => {
                     
             </div>
 
-            <div className="Burger">
-                <img src="../Burger.svg" alt="" />
-            </div>
+            <Burger/>
 
         </div>
     );

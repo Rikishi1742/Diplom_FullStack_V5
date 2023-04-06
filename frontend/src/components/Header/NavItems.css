@@ -17,7 +17,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
 
 .NavItemsContainer .Items {
@@ -56,6 +55,7 @@ a {
     display: none;
     height: 5vh;
     width: 7vh;
+    z-index: 7;
 }
 
 .Burger img {
@@ -115,5 +115,6 @@ a {
         width: 30vw;
         background-color: #66CC66;
         display: none;
+        z-index: 6;
     }
 }

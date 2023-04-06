@@ -2,7 +2,7 @@ import './Logo.css'
 
 import NavLink from '../../components/ui/NavLink';
 
-const Logo = (href) => {
+const Logo = () => {
 
     return (
         <div className='Logo'>
