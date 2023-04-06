@@ -6,7 +6,6 @@ import { getTokens, saveTokens, decodeToken } from '../manage-tokens';
 import { useNavigate, Routes, Route } from 'react-router-dom';
 import { CHECK_REFRESH_TOKEN_AND_GENERATE_NEW_ACCESS_TOKEN } from '../GraphQL/mutation';
 import { useMutation } from '@apollo/client';
-import LoginPage from '../pages/Login/LoginPage';
 
 import { CSpinner, CContainer } from '@coreui/react';
 
@@ -34,7 +33,7 @@ function RedirectToLogin({ children }: Props) {
 
     const logout = useCallback(() => {
         setUserDataByDispatch('LOGOUT', null);
-        navigate('/login');
+        navigate('/');
     }, [setUserDataByDispatch]);
 
     const GetAndRefreshTokensIfNeeded = useCallback(() => {

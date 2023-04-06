@@ -94,6 +94,14 @@ ul {
 }
 
 
+.lazy-div {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100% !important;
+  height: 100% !important;
+}
 
 @media screen and (max-width: 1300px) {
 
