@@ -32,6 +32,7 @@ const LazyShow = ({ children }) => {
   const controls = useAnimation();
   const rootRef = useRef();
   const onScreen = useOnScreen(rootRef);
+
   useEffect(() => {
     if (onScreen) {
       controls.start({

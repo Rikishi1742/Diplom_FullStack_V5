@@ -54,6 +54,10 @@ const NavItems = ({ children }: Props) => {
                     
             </div>
 
+            <div className="Burger">
+                <img src="../Burger.svg" alt="" />
+            </div>
+
         </div>
     );
 };

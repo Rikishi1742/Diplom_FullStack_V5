@@ -13,9 +13,6 @@ const BurgerMenu = ({ children }: Props) => {
         {children}
       </div>
 
-      <div className="Burger">
-        <img src="../Burger.svg" alt="" />
-      </div>
     </>
     
   );

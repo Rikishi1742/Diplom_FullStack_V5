@@ -27,6 +27,7 @@
     justify-content: space-between;
     text-align: right;
     align-items: center;
+    z-index: 10;
 }  
 
 .Items p {
@@ -108,5 +109,11 @@ a {
 
     .BurgerMenu {
         justify-content: right;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 30vw;
+        background-color: #66CC66;
+        display: none;
     }
 }
