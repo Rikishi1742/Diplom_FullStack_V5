@@ -11,8 +11,8 @@ const BurgerMenu = ({ children }: Props) => {
   return (
     <>
       <div className="Items" onClick={() => {
-        menuItems[0].style.display = "block"
-        BurgerMenu[0].style.display = "block"
+        menuItems[0].style.display = "flex"
+        BurgerMenu[0].style.display = "flex"
 
       }}>
         {children}

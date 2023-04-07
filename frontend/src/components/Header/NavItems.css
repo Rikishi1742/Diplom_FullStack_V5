@@ -1,3 +1,5 @@
+
+
 .NavItemsContainer {
     width: 70vw;
     height: 100%;
@@ -46,6 +48,13 @@
     text-shadow: 7px 7px 14px rgba(0, 0, 0, 0.25);
 }
 
+.Items {
+    z-index: 11;
+    color: #FFFFFF;
+    width: 100%;
+    height: 100%;
+}
+
 a {
     display: flex;
     align-items: center;
@@ -62,6 +71,8 @@ a {
     width: auto;
     height: 100%;
 }
+
+
 
 
 .Items p:hover {
@@ -95,9 +106,6 @@ a {
 }
 
 @media screen and (max-width: 950px) {
-    .Items p{
-        display: none;
-    }
 
     .Burger {
         display: block;
@@ -105,7 +113,22 @@ a {
 
     .NavItemsContainer .Items {
         display: none;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
     }
+
+    .Items p {
+        font-size: 3vw;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        margin-left: 10px;
+    }
+
+    .Items p:hover {
+        color: #FFFFFF;
+    }
+    
 
     .BurgerMenu {
         justify-content: right;
@@ -115,6 +138,6 @@ a {
         width: 30vw;
         background-color: #66CC66;
         display: none;
-        z-index: 6;
+        z-index: 101;
     }
 }

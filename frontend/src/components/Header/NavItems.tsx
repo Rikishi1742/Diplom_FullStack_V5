@@ -21,6 +21,7 @@ const NavItems = ({ children }: Props) => {
     const { userPayload, loginStatus, setUserDataByDispatch,  } = useContext(UserContext);
 
     return (
+        <>
         <div className="NavItemsContainer">
             <Logo />
 
@@ -58,6 +59,7 @@ const NavItems = ({ children }: Props) => {
             <Burger/>
 
         </div>
+        </>
     );
 };
 

@@ -6,9 +6,13 @@ import './Nav.css';
 const Nav = () => {
 
     return (
-    <nav>
-        <NavItems />
-    </nav>
+    <>
+        <div className="darktheme"></div>
+        <nav>
+            <NavItems />
+        </nav>
+    </>
+    
     );
 
 };

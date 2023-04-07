@@ -80,7 +80,7 @@ hr {
 .darktheme
 {
   display: none;
-  z-index: 24;
+  z-index: 100;
   position: fixed;
   top: 0;
   width: 100vw;
