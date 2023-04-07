@@ -1,9 +1,12 @@
 import React from "react";
 import NavItems from "./NavItems";
 
+
 import './Nav.css';
 
 const Nav = () => {
+
+    
 
     return (
     <>
@@ -11,6 +14,7 @@ const Nav = () => {
         <nav>
             <NavItems />
         </nav>
+       
     </>
     
     );
