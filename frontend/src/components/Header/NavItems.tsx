@@ -53,29 +53,29 @@ const NavItems = ({ children }: Props) => {
                          
                     </div>
 
-                    <NavLink href="/aboutUS" active>
+                    <a href="/aboutUS">
                         <p>About Us</p>
-                    </NavLink>
+                    </a>
 
-                    <NavLink href="/Education" active>
+                    <a href="/Education">
                         <p>Education</p>
-                    </NavLink>
+                    </a>
 
-                    {loginStatus == LoginStatus.LoggedOut &&  <NavLink href="/login" active>
+                    {loginStatus == LoginStatus.LoggedOut &&  <a href="/login">
                         <p onClick={() => {navigate("/login");}}>Authorization</p>
-                    </NavLink>}
+                    </a>}
 
-                    <NavLink href="/settings" active>
+                    <a href="/settings">
                         <p>Settings</p>
-                    </NavLink>  
+                    </a>  
 
                     {loginStatus == LoginStatus.LoggedIn && <>
-                        <NavLink href="/Account" active><p>Account</p></NavLink> 
-                        <NavLink href="/login" active>
+                        <a href="/Account" ><p>Account</p></a> 
+                        <a href="/login" >
                         <p onClick={() => {setUserDataByDispatch("LOGOUT", null)
                         deleteTokens()
                         navigate("/login");}}>Exit</p>
-                    </NavLink>
+                    </a>
                     </>
                     }
                 </BurgerMenu>
